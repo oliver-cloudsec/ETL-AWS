@@ -29,7 +29,7 @@ The goal was to extract cryptocurrency data, transform it into a structured form
 
 Here’s the high-level architecture of the ETL pipeline:
 
-![Architecture Diagram](images/architecture-diagram.png)
+![Architecture Diagram](images/Screen/diagram.drawio.png)
 
 ---
 
@@ -37,24 +37,24 @@ Here’s the high-level architecture of the ETL pipeline:
 
 ### 1. Lambda Function – Data Ingestion
 Fetches cryptocurrency data from APIs and writes raw JSON to S3.  
-![Lambda Function](images/lambda-function.png)
+![Lambda Function](images/Screen/lambda-function.png)
 
 ### 2. Raw Data in S3
 Raw JSON files stored in S3 (`s3://bucket/raw/`).  
-![S3 Raw](images/s3-raw.png)
+![S3 Raw](images/Screen/s3-raw.png)
 
 ### 3. Glue Crawler
 Scans the raw bucket and creates metadata tables in Glue Data Catalog.  
-![Crawler](images/crawler.png)
+![Crawler](images/Screen/crawler.png)
 
 ### 4. Glue Job – Data Transformation
 Converts raw JSON into optimized Parquet format.  
-![Glue Job](images/glue-job.png)
+![Glue Job](images/Screen/glue-job.png)
 
 ### 5. Transformed Data in S3
 The transformed Parquet data stored in a separate S3 folder.  
-![S3 Transformed](images/s3-transformed.png)
+![S3 Transformed](images/Screen/s3-transformed.png)
 
 ### 6. Athena Queries
 Querying transformed data with Athena to analyze cryptocurrency prices.  
-![Athena Query](images/athena-query.png)
+![Athena Query](images/Screen/athena-query.png)
