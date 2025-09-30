@@ -29,7 +29,7 @@ The goal was to extract cryptocurrency data, transform it into a structured form
 
 Here’s the high-level architecture of the ETL pipeline:
 
-![Architecture Diagram](images/Screen/diagram.drawio(1).png)
+![Architecture Diagram](images/Screen/diagram.drawio.png)
 
 ---
 
